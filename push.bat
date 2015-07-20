@@ -1,2 +1,1 @@
-cfx xpi && wget --post-file=deluminate.xpi http://localhost:8888/
-
+jpm post --post-url http://localhost:8888

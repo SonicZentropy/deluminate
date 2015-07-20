@@ -1,13 +1,14 @@
 var buttons = require('sdk/ui/button/action');
 var ss = require("sdk/simple-storage");
 var tabs = require("sdk/tabs");
-var self = require("sdk/self");
+//var self = require("sdk/self");
 const { PageMod } = require("sdk/page-mod");
+
 if (!ss.storage.pages) {
     ss.storage.pages = [];
     ss.storage.pages.push("*.google.com");
 }
-
+ss.storage.pages = [];
 ss.storage.pages.push("*.google.com");
 
 var options = {
@@ -31,16 +32,15 @@ buttons.ActionButton({
 });
 
 function handleClick(state) {
-    console.error('active clicked');
+
+    console.log('Active Click Log2');
 
     ss.storage.pages.push(tabs.activeTab.url);
     if (mod) {
         console.error('destroying mod');
         mod.destroy();
     }
-   // mod = null;
-    console.error('creating mod with sites:');
-    console.error(ss.storage.pages);
+    console.log("Excluded page array: " +ss.storage.pages);
 
     options = {
         include: "*",
