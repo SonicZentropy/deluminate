@@ -2,14 +2,3 @@ build/
 *.zip
 
 .idea
-.idea/jsLibraryMappings.xml
-.idea/jsLinters
-.idea/uiDesigner.xml
-.idea/compiler.xml
-.idea/workspace.xml
-.idea/modules.xml
-.idea/inspectionProfiles
-.idea/misc.xml
-.idea/libraries
-.idea/vcs.xml
-.idea/workspace.xml
