@@ -1,4 +1,11 @@
-asdf asfdsafd/* Invert the luminance iff any of the "delumine" styles are selected. */
+body{
+	/*color: #333333;
+	background-color: #464646;*/
+
+}
+
+
+/* Invert the luminance iff any of the "delumine" styles are selected. */
 html[hc^="delumine"] {
   -webkit-filter: invert() hue-rotate(180deg) brightness(105%) contrast(105%);
 }
