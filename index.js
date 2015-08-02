@@ -78,5 +78,6 @@ function extractDomain(url) {
     domain = domain.split(':')[0];
 
     return domain;
+
 }
 
