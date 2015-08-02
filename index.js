@@ -1,20 +1,19 @@
 var buttons = require('sdk/ui/button/action');
 var ss = require("sdk/simple-storage");
 var tabs = require("sdk/tabs");
-var urls = require("sdk/url");
+//var urls = require("sdk/url");
 //var self = require("sdk/self");
 const { PageMod } = require("sdk/page-mod");
 
 if (!ss.storage.pages) {
     ss.storage.pages = [];
-    ss.storage.pages.push("*.google.com");
+    ss.storage.pages.push("*.mozilla.com");
 }
-ss.storage.pages = [];
-ss.storage.pages.push("*.google.com");
+//ss.storage.pages = [];
+//ss.storage.pages.push("*.google.com");
 
 var options = {
-    include: "*",
-    exclude: ss.storage.pages,
+    include: ss.storage.pages,
     contentStyleFile: "./Stylish.css",
     attachTo: ["top"]
 };
@@ -23,7 +22,7 @@ var mod = PageMod(options);
 
 buttons.ActionButton({
     id: "mozilla-link",
-    label: "Visit Mozilla",
+    label: "Activate Deluminate",
     icon: {
         "16": "./icon-16.png",
         "32": "./icon-32.png",
@@ -44,7 +43,7 @@ function handleClick(state) {
         ss.storage.pages.splice(ss.storage.pages.indexOf(currentDomain), 1);
         console.info("Popping url: " + currentDomain);
     }
-    console.info("Excluded page array after click: " +ss.storage.pages);
+    console.info("Included page array after click: " +ss.storage.pages);
 
     if (mod) {
         console.log('destroying mod');
@@ -53,12 +52,12 @@ function handleClick(state) {
 
 
     options = {
-        include: "*",
-        exclude: ss.storage.pages,
+        include: ss.storage.pages,
         contentStyleFile: "./Stylish.css",
         attachTo: ["top", "existing"]
     };
     mod = PageMod(options);
+
 
 
 
@@ -80,3 +79,4 @@ function extractDomain(url) {
 
     return domain;
 }
+
