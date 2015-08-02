@@ -1,8 +1,8 @@
 /* AGENT_SHEET */
 @-moz-document url-prefix(http://), url-prefix(https://), url-prefix(ftp://), url-prefix(file://), url(about:blank), url-prefix("about:neterror"){
 
-    /* Firefox Scrollbars */
-    scrollbar {opacity: .75 !important;}
+    /* Firefox Scrollbars 
+    scrollbar {opacity: .75 !important;}*/
 
     /* Base */
 
@@ -12,7 +12,7 @@
         outline-color: #444 !important;
         text-shadow: none !important;
         box-shadow: none !important;
-        -moz-box-shadow: none !important;
+
         background-color: transparent !important;
     }
 
@@ -71,7 +71,7 @@
         /* Popup divs that use visibility: hidden and display: none */
     div[style*="display: block"],
     div[style*="visibility: visible"] {
-        background-color: #1a1a1a !important;
+        background-color: #333333 !important;
     }
 
 
@@ -111,7 +111,7 @@
 
     a {
         color: #71BAA5 !important;
-        background-color: #1a1a1a !important;
+        background-color: #333333 !important;
         opacity: 1 !important;
         text-indent: 0 !important;
     }
@@ -162,8 +162,6 @@
 
         background-image: none !important;
         border-radius: 5px !important;
-        -moz-border-radius: 5px !important;
-        -webkit-border-radius: 5px !important;
         text-indent: 0 !important;
     }
 
@@ -234,7 +232,7 @@
 @-moz-document url(about:newtab) {
 
     window {
-        background: #1a1a1a !important;
+        background: #333333 !important;
     }
 
     #newtab-scrollbox {
@@ -252,7 +250,7 @@
 
     /* Browser Background */
     browser[type="content-primary"] {
-        background-color: #1a1a1a !important;
+        background-color: #333333 !important;
     }
 
 }
